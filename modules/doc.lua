@@ -8,17 +8,18 @@ function doc.is_exists(document, id)
     local success, result = pcall(function() return document[id].id end)
     return success
 end
-function doc.draw_component(info, parent_id, Element)
+
+function doc.draw_component(info, parent_id, el)
     if not doc.is_exists(info.document, parent_id) then
         return
     end
     local id = id_generator.generate(info.document)
-    local attrs = attributes.concat(Element.attributes, {
+    local attrs = attributes.concat(el.attributes, {
         id = id
     })
     local xml = xml_generator.generate({
-        tag = Element.tag,
-        label = Element.label,
+        tag = el.tag,
+        label = el.label,
         attributes = attributes.any2str(attrs)
     })
     info.document[parent_id]:add(xml)
