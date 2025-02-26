@@ -17,7 +17,7 @@ function this.any2str(attrs)
     if type(attrs) == "table" then
         local xml = ''
         for k, v in pairs(attrs) do
-            xml = xml .. ' ' .. k .. '="' .. v .. '"'
+            xml = xml .. ' ' .. k .. '="' .. tostring(v) .. '"'
         end
         return xml
     end
