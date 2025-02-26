@@ -8,5 +8,6 @@ This project is licensed under the MIT license. See the [LICENSE](LICENSE) file 
 
 - **Nickname**: VulpesDust
 - **Name**: George Noise
-- **Email**: vulpesdust+github@gmail.com
+- **Email**: george.noise.dev+github@gmail.com
+- **Alternate Email**: vulpesdust+github@gmail.com
 - **GitHub**: [VulpesDust](https://github.com/VulpesDust)
