@@ -13,9 +13,8 @@ function doc.draw_component(gui, parent_id, el)
     if not doc.is_exists(gui.document, parent_id) then
         return
     end
-    local id = id_generator.generate(gui.document)
-    local attrs = attributes.concat(el.attributes, {
-        id = id
+    local attrs = attributes.concat(el.atr or el.atrs or el.attributes or el.attrs or el.attr or el.attribute, {
+        id = id_generator.generate(gui.document)
     })
     local xml = xml_generator.generate({
         tag = el.tag,
@@ -23,7 +22,7 @@ function doc.draw_component(gui, parent_id, el)
         attributes = attributes.any2str(attrs)
     })
     gui.document[parent_id]:add(xml)
-    return id
+    return attrs.id
 end
 
 --  @param layouts = {
