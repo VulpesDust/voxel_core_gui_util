@@ -4,7 +4,7 @@
 
 <img src="icon.png">
 
-# GUI Util - Мод для движка VoxelCore
+# GUI Util - Mod for VoxelCore Engine
 
 GUI Util is a utility for working with interfaces as objects. It is a dependency for other mods developed for the VoxelCore engine.
 
